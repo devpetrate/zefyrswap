@@ -1,0 +1,19 @@
+{
+  "name": "create2-deployment",
+  "version": "1.0.0",
+  "description": "CREATE2 deployment setup for Base mainnet and other networks",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:base": "hardhat ignition deploy ignition/modules/SimpleStorage.js --network base --strategy create2 --verify",
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/SimpleStorage.js --network sepolia --strategy create2 --verify",
+    "deploy:optimism": "hardhat ignition deploy ignition/modules/SimpleStorage.js --network optimism --strategy create2 --verify",
+    "verify": "hardhat ignition verify"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.5",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.11",
+    "hardhat": "^2.22.15",
+    "dotenv": "^16.4.5"
+  }
+}
